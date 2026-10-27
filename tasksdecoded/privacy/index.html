@@ -41,12 +41,14 @@ the app's access in your device's Settings under Privacy &amp; Security &gt; Rem
 
 <h2>Anonymous usage data (optional)</h2>
 <p>To learn which features help and what gets in the way, the app counts how it is used: how often features are
-used (for example, "a task was completed"), how long each screen is open, how far the welcome tour gets, and rough
-sizes (for example, "6-10 projects"), along with the app version, the kind of device, and the system version. Once a
+used (for example, "a task was completed"), how long each screen is open, how far the welcome tour gets, and how
+many items of each kind you have (for example, "7 projects", never what they are), along with the app version, the kind of device, and the system version. Once a
 day at most, these counts are sent through Apple's CloudKit to the app's own iCloud database, where we view them in
 summary. They never include anything you write or enter (no titles, notes, names, numbers, or dates), and no name,
 email, Apple Account, or device identifier. Each copy of the app is known only by a random number it makes for
-itself, so reports from different days can be counted together; it can't be traced back to you. This data isn't
+itself, so reports from different days can be counted together; it can't be traced back to you. CloudKit also
+marks each report with an anonymous ID for the iCloud account that sent it (a random code, not your name, email, or
+Apple Account), which we use only to count your iPhone, iPad, and Mac as one person. This data isn't
 linked to you, isn't used for advertising or tracking, and isn't shared with anyone. Reports are sent only when your
 device is signed in to iCloud. You can turn this off at any time in App Settings &gt; Share Anonymous Usage Data;
 anything not yet sent is deleted.</p>
@@ -56,6 +58,10 @@ anything not yet sent is deleted.</p>
 app version, the kind of device, and the system version. While Share Anonymous Usage Data is on, these reports are
 sent the same way as the usage counts, with the same random number, so we can tell how many devices a problem
 affects. They contain nothing you've entered. With the setting off, the app asks before sending one.</p>
+<p>With the same setting on, the app also sends Apple's daily performance summary (also from MetricKit): how much
+processor, graphics, network, and storage it used, how long it ran in the background, how quickly it opened, how
+often it paused or quit unexpectedly, and its memory use. We use it to make the app faster and easier on your battery.
+It contains nothing you've entered.</p>
 
 <h2>Feedback you send</h2>
 <p>App Settings &gt; Help &amp; Feedback lets you report a bug, suggest a feature, or ask a question. It is sent only
@@ -83,7 +89,7 @@ your payment details. Apple may tell the app whether a subscription is active so
 <ul>
   <li>We do not collect, sell, rent, or share personal information.</li>
   <li>We do not use advertising or tracking, and have no third-party SDKs that collect data. The only analytics are
-    the anonymous usage counts and crash reports described above.</li>
+    the anonymous usage counts, crash reports, and performance summaries described above.</li>
   <li>We do not knowingly collect information from children.</li>
 </ul>
 
